@@ -12,5 +12,4 @@ try:
     models.db.session.commit()
 except:
     import traceback
-
     traceback.print_exc()

@@ -101,7 +101,7 @@ def add_questions():
 
         # Commit the changes to the database
         db.session.commit()
-        return jsonify({"message": "Bulk insert successful", "success": True})
+        return jsonify({"message": "Questions insert successfully", "success": True})
     except Exception as e:
         return jsonify({"error"})
     
@@ -211,27 +211,27 @@ def create_quiz():
         return jsonify({"error"})
     
 
-# @app.route('/quiz_questions', methods=['POST'])
-# def quiz_questions():
-#     try:
-#         id = request.json.get('id')
-#         quiz_id = request.json.get('quiz_id')
-#         quiz_data = Quiz.query
-#         # if quiz_id:
-#         #     quiz = quiz_data.filter(
-#         #         Quiz.quiz_id == quiz_id
-#         #     )
-#         #     if quiz.first() is None:
-#         #         return {"success": False, "message": " No such Quiz ID"}
+@app.route('/quiz_questions', methods=['POST'])
+def quiz_questions():
+    try:
+        id = request.json.get('id')
+        quiz_id = request.json.get('quiz_id')
+        quiz_data = Quiz.query
+        # if quiz_id:
+        #     quiz = quiz_data.filter(
+        #         Quiz.quiz_id == quiz_id
+        #     )
+        #     if quiz.first() is None:
+        #         return {"success": False, "message": " No such Quiz ID"}
         
-#         for i in request.json['question_id']:           
-#             p = QuizQuestions(id=id,quiz_id=quiz_id, question_id=i)
-#             db.session.add(p)
+        for i in request.json['question_id']:           
+            p = QuizQuestions(id=id,quiz_id=quiz_id, question_id=i)
+            db.session.add(p)
             
-#             db.session.commit()
-#             return  {"message": 'Questiond Quiz created successfully'}, 200
-#     except:
-#         return{
-#             "success":False,
-#             "message": "No questions added"
-#         }
+            db.session.commit()
+            return  {"message": 'Questiond Quiz created successfully'}, 200
+    except:
+        return{
+            "success":False,
+            "message": "No questions added"
+        }
