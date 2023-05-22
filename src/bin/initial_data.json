@@ -1,0 +1,42 @@
+{
+    "User": [
+        {
+            "id": "99ba452a-9692-4550-b53f-da9cb9996118",
+            "name": "QA TEST",
+            "email": "QA.TEST@annalect.com"
+        },
+        {
+            "id": "e7e5144f-6649-4ecd-9b1c-ef78727fd9a7",
+            "name": "Ben",
+            "email": "benjamin.greene@annalect.com"
+        },
+        {
+            "id": "88ba783a-9692-3150-b53f-da9cb8786112",
+            "name": "Kishore",
+            "email": "kishore@annalect.com"
+        }
+    ],
+    "Question": [
+        {
+            "id": "1",
+            "question": "Captial of India",
+            "answer": "Delhi",
+            "created_by": "99ba452a-9692-4550-b53f-da9cb9996118",
+            "updated_by": "99ba452a-9692-4550-b53f-da9cb9996118"
+        },
+        {
+            "id": "2",
+            "question": "Captial of TamilNadu",
+            "answer": "Chennai",
+            "created_by": "88ba783a-9692-3150-b53f-da9cb8786112",
+            "updated_by": "88ba783a-9692-3150-b53f-da9cb8786112"
+        },
+        {
+            "id": "3",
+            "question": "National Animal",
+            "answer": "Tiger",
+            "created_by": "99ba452a-9692-4550-b53f-da9cb9996118",
+            "updated_by": "99ba452a-9692-4550-b53f-da9cb9996118"
+        }
+    ]
+}
