@@ -29,7 +29,7 @@ class User(db.Model):
 
 @dataclass
 class Question(db.Model):
-    id: str = db.Column(db.Text,primary_key=True)
+    id: str = db.Column(db.Text, primary_key=True)
     question: str = db.Column(db.Text, nullable=False)
     answer: str = db.Column(db.Text, nullable=False)
     created_by: User = db.Column(db.Text, db.ForeignKey("user.id"), nullable=False)

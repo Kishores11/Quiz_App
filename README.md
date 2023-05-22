@@ -32,8 +32,6 @@ Eg:
   After loading the data you can start the flask application by run.py command.
   
 
-
-
-
+I tried to create a quiz instance but I don't know the correct way how to answer the questions and save the response via json format.
 
 
