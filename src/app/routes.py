@@ -217,12 +217,12 @@ def quiz_questions():
         id = request.json.get('id')
         quiz_id = request.json.get('quiz_id')
         quiz_data = Quiz.query
-        # if quiz_id:
-        #     quiz = quiz_data.filter(
-        #         Quiz.quiz_id == quiz_id
-        #     )
-        #     if quiz.first() is None:
-        #         return {"success": False, "message": " No such Quiz ID"}
+        if quiz_id:
+            quiz = quiz_data.filter(
+                Quiz.quiz_id == quiz_id
+            )
+            if quiz.first() is None:
+                return {"success": False, "message": " No such Quiz ID"}
         
         for i in request.json['question_id']:           
             p = QuizQuestions(id=id,quiz_id=quiz_id, question_id=i)
